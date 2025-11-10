@@ -46,7 +46,7 @@ const plans = [
 
 export const PricingSection = () => {
   return (
-    <section id="pricing" className="py-32 px-6 bg-secondary/30">
+    <section id="pricing" className="pt-12 pb-32 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal>
           <div className="text-center mb-16">

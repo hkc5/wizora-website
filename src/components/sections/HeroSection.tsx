@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
   return (
-    <section className="pt-32 pb-60 px-6 relative">
+    <section className="pt-24 pb-32 px-6 relative">
       {/* 3D Spline Orb Background - Fixed position to prevent scroll repaints */}
       <ErrorBoundary>
         <div

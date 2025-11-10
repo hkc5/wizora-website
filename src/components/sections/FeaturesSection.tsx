@@ -36,7 +36,7 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section id="features" className="py-32 px-6 bg-secondary/30">
+    <section id="features" className="pt-12 pb-32 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal>
           <div className="text-center mb-16">

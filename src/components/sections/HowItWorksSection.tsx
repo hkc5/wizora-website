@@ -27,7 +27,7 @@ const steps = [
 
 export const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-32 px-6">
+    <section id="how-it-works" className="pt-12 pb-32 px-6">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal>
           <div className="text-center mb-16">

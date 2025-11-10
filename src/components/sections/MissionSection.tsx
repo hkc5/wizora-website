@@ -3,7 +3,7 @@ import GlassCard from "@/components/GlassCard";
 
 export const MissionSection = () => {
   return (
-    <section className="py-32 px-6">
+    <section className="pt-12 pb-32 px-6">
       <div className="container mx-auto max-w-4xl">
         <ScrollReveal>
           <GlassCard className="text-center p-12">
