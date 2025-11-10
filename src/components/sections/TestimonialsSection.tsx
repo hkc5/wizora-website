@@ -38,7 +38,7 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-32 px-6 overflow-hidden">
+    <section id="testimonials" className="pt-16 pb-32 px-6 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -52,7 +52,10 @@ export const TestimonialsSection = () => {
         </ScrollReveal>
 
         <div className="relative">
-          <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+          <div
+            className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide"
+            style={{ height: "fit-content" }}
+          >
             {testimonials.map((testimonial, index) => (
               <ScrollReveal
                 key={index}
