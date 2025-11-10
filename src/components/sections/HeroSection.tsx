@@ -10,9 +10,19 @@ interface HeroSectionProps {
 export const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
   return (
     <section className="pt-32 pb-60 px-6 relative">
-      {/* 3D Spline Orb Background */}
+      {/* 3D Spline Orb Background - Fixed position to prevent scroll repaints */}
       <ErrorBoundary>
-        <div className="absolute inset-0 -z-10 overflow-hidden opacity-60 -translate-y-16">
+        <div
+          className="fixed inset-0 -z-10 opacity-60 pointer-events-none"
+          style={{
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100vh",
+            willChange: "auto",
+            contain: "layout style paint"
+          }}
+        >
           <Spline scene="https://prod.spline.design/Q53PF9cF9WtTorei/scene.splinecode" />
         </div>
       </ErrorBoundary>
