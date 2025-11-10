@@ -35,11 +35,13 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-xl border-b border-border" : ""
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 backdrop-blur-xl border border-border/30 rounded-full max-w-4xl w-[calc(100%-32px)] ${
+        isScrolled
+          ? "bg-background/40 shadow-level-2"
+          : "bg-background/20"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="px-6 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">

@@ -53,8 +53,8 @@ export const TestimonialsSection = () => {
 
         <div className="relative">
           <div
-            className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide"
-            style={{ height: "fit-content" }}
+            className="flex gap-6 overflow-x-auto overflow-y-hidden snap-x snap-mandatory scrollbar-hide items-center"
+            style={{ minHeight: "380px" }}
           >
             {testimonials.map((testimonial, index) => (
               <ScrollReveal
