@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 240 20% 6%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 20% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 20% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 266 100% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 20% 12%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 20% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 280 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 20% 15%;
+    --input: 240 20% 15%;
+    --ring: 266 100% 65%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 240 20% 7%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 266 100% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 20% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 20% 15%;
+    --sidebar-ring: 266 100% 65%;
+
+    /* Custom tokens */
+    --glow-primary: 266 100% 65%;
+    --glow-secondary: 280 70% 60%;
+    --glass-bg: 240 20% 10%;
+    --glass-border: 240 20% 20%;
+  }
+
+  .dark {
+    --background: 240 20% 6%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 20% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 20% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 266 100% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 20% 12%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 20% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 280 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 20% 15%;
+    --input: 240 20% 15%;
+    --ring: 266 100% 65%;
+    
+    --sidebar-background: 240 20% 7%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 266 100% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 20% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 20% 15%;
+    --sidebar-ring: 266 100% 65%;
+
+    /* Custom tokens */
+    --glow-primary: 266 100% 65%;
+    --glow-secondary: 280 70% 60%;
+    --glass-bg: 240 20% 10%;
+    --glass-border: 240 20% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-light;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+    font-weight: 300;
+  }
+
+  p {
+    opacity: 0.8;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-glass-bg/20 backdrop-blur-xl border border-glass-border/30;
+  }
+
+  .neumorphic-button {
+    box-shadow: 
+      0 8px 32px 0 rgba(139, 92, 246, 0.3),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .neumorphic-button:hover {
+    box-shadow: 
+      0 12px 48px 0 rgba(139, 92, 246, 0.5),
+      0 0 24px 0 rgba(139, 92, 246, 0.4),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .glow-effect {
+    position: relative;
+  }
+
+  .glow-effect::before {
+    content: '';
+    position: absolute;
+    inset: -100%;
+    background: radial-gradient(circle, hsl(var(--glow-primary) / 0.3) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: -1;
+  }
+
+  .stars-bg {
+    background-image: 
+      radial-gradient(2px 2px at 20% 30%, white, transparent),
+      radial-gradient(2px 2px at 60% 70%, white, transparent),
+      radial-gradient(1px 1px at 50% 50%, white, transparent),
+      radial-gradient(1px 1px at 80% 10%, white, transparent),
+      radial-gradient(2px 2px at 90% 60%, white, transparent),
+      radial-gradient(1px 1px at 33% 80%, white, transparent),
+      radial-gradient(1px 1px at 15% 90%, white, transparent);
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
