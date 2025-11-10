@@ -107,7 +107,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-light;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     overflow-x: hidden;
   }
 
