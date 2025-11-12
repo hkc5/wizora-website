@@ -20,10 +20,10 @@ export const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
             width: "100%",
             height: "100vh",
             willChange: "auto",
-            contain: "layout style paint"
+            contain: "layout style paint",
           }}
         >
-          <Spline scene="https://prod.spline.design/Q53PF9cF9WtTorei/scene.splinecode" />
+          <Spline scene="https://prod.spline.design/jB5IIJTeFiTA2DJ1/scene.splinecode" />
         </div>
       </ErrorBoundary>
 
