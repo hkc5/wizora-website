@@ -14,7 +14,7 @@ export const GalaxyBackground = () => {
     
     // Galaxy parameters
     const config = {
-      starCount: 3500,
+      starCount: 1500, // reduced for performance
       cloudCount: 80,
       armCount: 3,
       size: 2,
@@ -175,7 +175,12 @@ export const GalaxyBackground = () => {
 
     const animate = () => {
       if (!ctx) return;
-      
+      // Respect users who prefer reduced motion
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        animationFrameId = requestAnimationFrame(animate);
+        return;
+      }
+
       ctx.fillStyle = '#020205';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
@@ -208,7 +213,7 @@ export const GalaxyBackground = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
         init();
-      }, 100); // Wait 300ms after resize stops before regenerating
+      }, 300); // Wait 300ms after resize stops before regenerating
     };
 
     window.addEventListener('resize', debouncedResize);
@@ -227,6 +232,8 @@ export const GalaxyBackground = () => {
       ref={canvasRef}
       className="fixed inset-0 -z-10 w-full h-full bg-[#020205]"
       style={{ pointerEvents: 'none' }}
+      role="img"
+      aria-label="Animated galaxy background"
     />
   );
 };

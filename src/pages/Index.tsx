@@ -19,15 +19,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen stars-bg">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Navigation />
-      <HeroSection onScrollToSection={scrollToSection} />
-      <FeaturedInSection />
-      <HowItWorksSection />
-      <FeaturesSection />
-      <TestimonialsSection />
-      <MissionSection />
-      <PricingSection />
-      <FAQSection />
+      <main id="main-content">
+        <HeroSection onScrollToSection={scrollToSection} />
+        <FeaturedInSection />
+        <HowItWorksSection />
+        <FeaturesSection />
+        <TestimonialsSection />
+        <MissionSection />
+        <PricingSection />
+        <FAQSection />
+      </main>
       <Footer />
     </div>
   );
