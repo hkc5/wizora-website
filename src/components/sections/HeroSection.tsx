@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
   return (
-    <section className="pt-24 pb-32 px-6 relative">
+    <section className="pt-32 pb-32 px-6 relative">
       {/* Galaxy Canvas Background - Lightweight alternative to Spline */}
       <ErrorBoundary>
         <GalaxyBackground />

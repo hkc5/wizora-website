@@ -44,9 +44,11 @@ const Navigation = () => {
       <div className="px-6 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-xl font-bold">W</span>
-            </div>
+            <img 
+              src="/wizard-logo.png" 
+              alt="Wizora Logo" 
+              className="w-16 h-16 object-contain"
+            />
             <span className="text-xl font-light tracking-tight">Wizora</span>
           </Link>
 
