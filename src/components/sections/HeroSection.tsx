@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Spline from "@splinetool/react-spline";
+import { GalaxyBackground } from "@/components/ui/GalaxyBackground";
 import { Button } from "@/components/ui/button";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 
@@ -10,21 +10,9 @@ interface HeroSectionProps {
 export const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
   return (
     <section className="pt-24 pb-32 px-6 relative">
-      {/* 3D Spline Orb Background - Fixed position to prevent scroll repaints */}
+      {/* Galaxy Canvas Background - Lightweight alternative to Spline */}
       <ErrorBoundary>
-        <div
-          className="fixed inset-0 -z-10 opacity-60 pointer-events-none"
-          style={{
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100vh",
-            willChange: "auto",
-            contain: "layout style paint",
-          }}
-        >
-          <Spline scene="https://prod.spline.design/jB5IIJTeFiTA2DJ1/scene.splinecode" />
-        </div>
+        <GalaxyBackground />
       </ErrorBoundary>
 
       <div className="container mx-auto max-w-6xl relative z-10">
